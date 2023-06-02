@@ -18,6 +18,9 @@
 #define WRD_R LC(RIGHT)
 #define SSHOT LG(LS(N4))
 #define CSHOT LG(LS(LC(N4)))
+#define MEH_T LG(LS(LC(T)))
+#define MEH_C LG(LS(LC(C)))
+#define MEH_W LG(LS(LC(W)))
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -53,14 +56,14 @@
 
                 nav {
 // -----------------------------------------------------------------------------------------
-// | TAB  |      |      |      |      |     |   | PGUP |  WRD_L |   UP   | WRD_R  | HOME |  =  |
+// | TAB  |      |      |      | MEHT  |     |   | PGUP |  WRD_L |   UP   | WRD_R  | HOME |  =  |
 // | CTRL | LGUI | LALT | LCTL | LSFT |     |   |  PGDN  |  LEFT  |  DOWN  | RIGHT  |  EMD  |  +  |
 // | SHFT |      |      |      |      |     |   |  -  |  _  |      |        |     |     |
 //                    | GUI | SPC | SYM/BSPS |   | FUN | NAV/RET | ALT |
                         bindings = <
-    &kp TAB    &none     &none     &none     &none      &none       &kp PG_UP  &kp WRD_L  &kp UP    &kp WRD_R  &kp HOME   &kp EQUAL
+    &kp TAB    &none     &kp MEH_W     &none     &none      &kp MEH_T       &kp PG_UP  &kp WRD_L  &kp UP    &kp WRD_R  &kp HOME   &kp EQUAL
     &kp LCTRL  &kp LGUI  &kp LALT  &kp LCTL  &kp LSHFT  &none       &kp PG_DN  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END    &kp PLUS
-    &kp LSHFT  &none     &none     &none     &none      &none       &kp MINUS  &kp UNDER  &kp COMMA &kp DOT    &kp SLASH  &none
+    &kp LSHFT  &none     &none     &kp MEH_C    &none      &none       &kp MINUS  &kp UNDER  &kp COMMA &kp DOT    &kp SLASH  &none
         &kp LGUI &kp SPACE &lt SYM BSPS   &lt FUN DEL  &lt NAV RET &kp RALT
                         >;
                 };
