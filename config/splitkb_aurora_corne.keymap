@@ -16,8 +16,8 @@
 
 #define WRD_L LC(LEFT)
 #define WRD_R LC(RIGHT)
-#define SSHOT LG(LS(N4))
-#define CSHOT LG(LS(LC(N4)))
+#define S_SHOT LG(LS(N4))
+#define C_SHOT LG(LS(LC(N4)))
 #define MEH_T LG(LS(LC(T)))
 #define MEH_C LG(LS(LC(C)))
 #define MEH_W LG(LS(LC(W)))
@@ -70,12 +70,12 @@
 
                fun {
 // -----------------------------------------------------------------------------------------
-// | TAB  |  F1  |  F2  |  F3  |  F4  |     |   |     |      |      |      |      |     |
+// | TAB  |  F1  |  F2  |  F3  |  F4  |     |   |     | SSHOT |CSHOT |      |      |     |
 // | CTRL |  F5  |  F6  |  F7  |  F8  |     |   |     | RSFT | RCTL | LALT | RGUI |     |
 // | SHFT |  F9  |  F10 |  F11 |  F12 |     |   |  -  |  _   |      |      |      |     |
 //                    | GUI | SPC | SYM/BSPS |   | FUN | NAV/RET | ALT |
                         bindings = <
-    &kp TAB    &kp F1  &kp F2   &kp F3   &kp F4   &none       &none    &none    &none    &none     &none    &none
+    &kp TAB    &kp F1  &kp F2   &kp F3   &kp F4   &none       &none    &kp S_SHOT    &kp C_SHOT   &none     &none    &none
     &kp LCTRL  &kp F5  &kp F6   &kp F7   &kp F8   &none       &none     &kp RSHFT   &kp RCTRL  &kp RALT  &kp RGUI     &none
     &kp LSHFT  &kp F9  &kp F10  &kp F11  &kp F12  &none       &kp MINUS  &kp UNDER  &none   &none   &none      &none     &none
 &kp LGUI &kp SPACE &lt SYM BSPS   &lt FUN DEL  &lt NAV RET &kp RALT
