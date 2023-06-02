@@ -77,7 +77,7 @@
                         bindings = <
     &kp TAB    &kp F1  &kp F2   &kp F3   &kp F4   &none       &none    &kp S_SHOT    &kp C_SHOT   &none     &none    &none
     &kp LCTRL  &kp F5  &kp F6   &kp F7   &kp F8   &none       &none     &kp RSHFT   &kp RCTRL  &kp RALT  &kp RGUI     &none
-    &kp LSHFT  &kp F9  &kp F10  &kp F11  &kp F12  &none       &kp MINUS  &kp UNDER  &none   &none   &none      &none     &none
+    &kp LSHFT  &kp F9  &kp F10  &kp F11  &kp F12  &none       &kp MINUS  &kp UNDER  &none   &none   &none      &none
 &kp LGUI &kp SPACE &lt SYM BSPC   &lt FUN DEL  &lt NAV RET &kp RALT
                         >;
                };
