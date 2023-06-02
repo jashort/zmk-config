@@ -21,42 +21,57 @@
 // |  TAB     |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BKSP  |
 // | ESC-CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '    |
 // | SHFT     |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | L3/DEL  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+//                    | GUI | SPC | SYM/BSPS |   | FUN | NAV/RET | ALT |
                         bindings = <
-   &kp TAB        &kp Q  &kp W  &kp E  &kp R  &kp T   &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
-   &mt LCTRL ESC  &kp A  &kp S  &kp D  &kp F  &kp G   &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-   &kp LSHFT      &kp Z  &kp X  &kp C  &kp V  &kp B   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &lt 3 DEL
-                &kp LGUI  &kp SPACE  &mo 1            &mo 2  &kp RET  &kp RALT
+    &kp TAB        &kp Q  &kp W  &kp E  &kp R  &kp T   &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSLS
+    &mt LCTRL ESC  &kp A  &kp S  &kp D  &kp F  &kp G   &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+    &kp LSHFT      &kp Z  &kp X  &kp C  &kp V  &kp B   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &lt 3 DEL
+                &kp LGUI  &kp SPACE  &lt 1 BSPS            &mo 3  &lt 2 RET  &kp RALT
                         >;
 
                 };
-                lower {
+                sym {
 // -----------------------------------------------------------------------------------------
 // |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |   =   |
 // |  ~   |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |   +   |
-// | SHFT |SSHOT|CSHOT|  [  |  {  |  (  |   |  )  |  }  |  ]  |  -  |  _  | PSCRN |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | SHFT |  [  |  ]  |  {  |  }  |     |   |  -  |  _  |  ,  |  .  |  /  | PSCRN |
+//                    | GUI | SPC | SYM/BSPS |   | FUN | NAV/RET | ALT |
                         bindings = <
-   &kp GRAVE   &kp N1     &kp N2  &kp N3    &kp N4    &kp N5         &kp N6     &kp N7    &kp N8          &kp N9     &kp N0     &kp EQUAL
-   &kp TILDE   &kp EXCL   &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET  &kp AMPS  &kp KP_MULTIPLY &kp LPAR   &kp RPAR   &kp PLUS
-   &kp LSHFT   &kp SSHOT  &kp CSHOT  &kp LBKT  &kp LBRC  &kp LPAR    &kp RPAR   &kp RBRC  &kp RBKT        &kp MINUS  &kp UNDER  &kp PSCRN
-                                 &kp LGUI  &kp SPACE   &trans       &trans    &kp RET   &kp RALT
+    &kp GRAVE   &kp N1     &kp N2  &kp N3    &kp N4    &kp N5         &kp N6     &kp N7    &kp N8          &kp N9     &kp N0     &kp EQUAL
+    &kp TILDE   &kp EXCL   &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET  &kp AMPS  &kp KP_MULTIPLY &kp LPAR   &kp RPAR   &kp PLUS
+    &kp LSHFT   &kp SSHOT  &kp CSHOT  &kp LBKT  &kp LBRC  &kp LPAR    &kp RPAR   &kp RBRC  &kp RBKT        &kp MINUS  &kp UNDER  &kp PSCRN
+                                   &kp LGUI  &kp SPACE  &lt 1 BSPS            &mo 3  &lt 2 RET  &kp RALT
                         >;
                 };
 
-                raise {
+
+                nav {
 // -----------------------------------------------------------------------------------------
-// |      |  F1  |  F2  |  F3  |  F4  |     |   |     |  WRD_L |   UP   | WRD_R  |     |  \  |
-// | CTRL |  F5  |  F6  |  F7  |  F8  |     |   |  -  |  LEFT  |  DOWN  | RIGHT  |     |  |  |
-// | SHFT |  F9  |  F10 |  F11 |  F12 |     |   |  _  |  Home  |  End   |        |     |     |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |      |      |      |      |      |     |   | PGUP |  WRD_L |   UP   | WRD_R  | HOME |  =  |
+// | CTRL | LGUI | LALT | LCTL | LSFT |     |   |  PGDN  |  LEFT  |  DOWN  | RIGHT  |  EMD  |  +  |
+// | SHFT |      |      |      |      |     |   |  -  |  _  |      |        |     |     |
+//                    | GUI | SPC | SYM/BSPS |   | FUN | NAV/RET | ALT |
                         bindings = <
-   &kp TAB    &kp F1  &kp F2   &kp F3   &kp F4   &none       &none      &kp WRD_L  &kp UP    &kp WRD_R  &none     &kp BSLH
-   &kp LCTRL  &kp F5  &kp F6   &kp F7   &kp F8   &none       &kp MINUS  &kp LEFT   &kp DOWN  &kp RIGHT  &none     &kp PIPE
-   &kp LSHFT  &kp F9  &kp F10  &kp F11  &kp F12  &none       &kp UNDER  &kp HOME   &kp END   &none      &none     &none
-                             &kp LGUI &kp SPACE &kp LALT   &trans    &kp RET    &kp RALT
+    &kp TAB    &kp F1  &kp F2   &kp F3   &kp F4   &none       &none      &kp WRD_L  &kp UP    &kp WRD_R  &none     &kp BSLH
+    &kp LCTRL  &kp F5  &kp F6   &kp F7   &kp F8   &none       &kp MINUS  &kp LEFT   &kp DOWN  &kp RIGHT  &none     &kp PIPE
+    &kp LSHFT  &kp F9  &kp F10  &kp F11  &kp F12  &none       &kp UNDER  &kp HOME   &kp END   &none      &none     &none
+                         &kp LGUI  &kp SPACE  &lt 1 BSPS            &mo 3  &lt 2 RET  &kp RALT
                         >;
                 };
+
+               fun {
+// -----------------------------------------------------------------------------------------
+// |      |  F1  |  F2  |  F3  |  F4  |     |   |     |      |      |      |      |     |
+// | CTRL |  F5  |  F6  |  F7  |  F8  |     |   |     | RSFT | RCTL | LALT | RGUI |     |
+// | SHFT |  F9  |  F10 |  F11 |  F12 |     |   |  -  |  _   |      |      |      |     |
+//                    | GUI | SPC | SYM/BSPS |   | FUN | NAV/RET | ALT |
+                        bindings = <
+&kp TAB    &kp F1  &kp F2   &kp F3   &kp F4   &none       &none      &kp WRD_L  &kp UP    &kp WRD_R  &none     &kp BSLH
+        &kp LCTRL  &kp F5  &kp F6   &kp F7   &kp F8   &none       &kp MINUS  &kp LEFT   &kp DOWN  &kp RIGHT  &none     &kp PIPE
+        &kp LSHFT  &kp F9  &kp F10  &kp F11  &kp F12  &none       &kp UNDER  &kp HOME   &kp END   &none      &none     &none
+                               &kp LGUI  &kp SPACE  &lt 1 BSPS            &mo 3  &lt 2 RET  &kp RALT
+                        >;
+               };
 
                 blue {
 // -----------------------------------------------------------------------------------------
@@ -68,7 +83,7 @@
    &none      &none        &none        &none        &none        &none          &none  &none  &none  &none  &none  &none
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none  &none  &none  &none  &none  &none
    &none      &none        &none        &none        &none        &none          &none  &none  &none  &none  &none  &none
-                                    &kp LGUI    &kp SPACE   &trans             &trans   &kp RET  &kp RALT
+                               &kp LGUI  &kp SPACE  &lt 1 BSPS            &mo 3  &lt 2 RET  &kp RALT
                         >;
                 };
 
