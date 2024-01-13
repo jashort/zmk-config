@@ -13,14 +13,11 @@
 #define NAV   2
 #define BLU   3
 
-#define WRD_L LC(LEFT)
-#define WRD_R LC(RIGHT)
+#define WRD_L LA(LEFT)
+#define WRD_R LA(RIGHT)
 #define S_SHOT LG(LS(N4))
 #define C_SHOT LG(LS(LC(N4)))
-#define MEH_T LG(LS(LC(T)))
-#define MEH_C LG(LS(LC(C)))
-#define MEH_W LG(LS(LC(W)))
-#define MEH_X LG(LS(LC(X)))
+
 / {
         keymap {
                 compatible = "zmk,keymap";
